@@ -1,0 +1,53 @@
+<resources>
+
+    <!--横线主题-->
+    <style name="HorizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">#E2E2E2</item>
+    </style>
+
+    <!--竖线主题-->
+    <style name="VerticalLine">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_cecece</item>
+    </style>
+
+    <!--base自定义dialog主题-->
+    <style name="BaseMyDialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--模糊-->
+        <!--<inamename="android:windowFrame">@null</item>-->
+        <!--<inamename="android:windowIsFloating">true</item>-->
+        <!--<inamename="android:windowIsTranslucent">true</item>-->
+        <!--<inamename="android:windowContentOverlay">@null</item>-->
+    </style>
+
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="DialogBgTran" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent_00000000</item><!--背景透明-->
+        <!--<item name="android:backgroundDimEnabled">false</item>-->
+
+    </style>
+
+    <style name="DialogBgTranDim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@color/transparent_00000000</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+    </style>
+
+
+</resources>
