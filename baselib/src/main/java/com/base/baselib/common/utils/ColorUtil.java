@@ -1,5 +1,6 @@
 package com.base.baselib.common.utils;
 
+import android.animation.ArgbEvaluator;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 
@@ -20,6 +21,12 @@ public class ColorUtil {
         int red = (color & 0x00FF0000) >> 16;
         int grey = Math.round(red * 0.299f + green * 0.587f + blue * 0.114f);
         return Color.argb(0xff, grey, grey, grey);
+    }
+
+    public static int evaluator(float offset, int startColor, int endColor) {
+        ArgbEvaluator argbEvaluator = new ArgbEvaluator();
+        int COLOR_START = (int) (argbEvaluator.evaluate(offset, startColor, endColor));
+        return COLOR_START;
     }
 
     /***

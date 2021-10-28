@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bluetooth</string>
+    <string name="measure_value">%1$s℃</string>
+</resources>

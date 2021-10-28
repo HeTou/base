@@ -608,7 +608,7 @@ public class DeviceUtil {
     }
 
 
-    @RequiresPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+    @RequiresPermission(allOf = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
     public static void systemPicture(Object target, int requestCode) {
         //调用相册
         Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -630,26 +630,28 @@ public class DeviceUtil {
         String imagePath = null;
         String scheme = uri.getScheme();
 
-        Log.d("DeviceUtil", "pic scheme: " + scheme + "\n toString():" + uri.toString());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && DocumentsContract.isDocumentUri(context, uri)) {
-            //如果是document类型的Uri,则通过document id处理
-            String docId = DocumentsContract.getDocumentId(uri);
-            Log.d("DeviceUtil", "uri :docment,id:" + docId);
-            if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
-                //解析出数字格式的id
-                String id = docId.split(":")[1];
-                String selection = MediaStore.Images.Media._ID + "=" + id;
-                imagePath = getImagePath(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
-            } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
-                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
-                imagePath = getImagePath(context, contentUri, null);
-            }
-        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
-            imagePath = getImagePath(context, uri, null);
-        } else if ("file".equalsIgnoreCase(uri.getScheme())) {
-            imagePath = uri.getPath();
-        }
-        Log.d("DeviceUtil", "pic imagePath:" + imagePath);
+
+        imagePath = UriUtil.getFilePath(context, uri);
+//        Log.d("DeviceUtil", "pic scheme: " + scheme + "\n toString():" + uri.toString());
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && DocumentsContract.isDocumentUri(context, uri)) {
+//            //如果是document类型的Uri,则通过document id处理
+//            String docId = DocumentsContract.getDocumentId(uri);
+//            Log.d("DeviceUtil", "uri :docment,id:" + docId);
+//            if ("com.android.providers.media.documents".equals(uri.getAuthority())) {
+//                //解析出数字格式的id
+//                String id = docId.split(":")[1];
+//                String selection = MediaStore.Images.Media._ID + "=" + id;
+//                imagePath = getImagePath(context, MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+//            } else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())) {
+//                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"), Long.valueOf(docId));
+//                imagePath = getImagePath(context, contentUri, null);
+//            }
+//        } else if ("content".equalsIgnoreCase(uri.getScheme())) {
+//            imagePath = getImagePath(context, uri, null);
+//        } else if ("file".equalsIgnoreCase(uri.getScheme())) {
+//            imagePath = uri.getPath();
+//        }
+//        Log.d("DeviceUtil", "pic imagePath:" + imagePath);
         return imagePath;
     }
 
@@ -661,6 +663,12 @@ public class DeviceUtil {
 
     /**
      * 安装APK
+     * 安装apk需要系统允许 安装权限 ，判断是否打开
+     * 1、 boolean haveInstallPermission = context.getPackageManager().canRequestPackageInstalls();
+     * 2、 打开设置页面
+     * **** Uri packageURI = Uri.parse("package:" + context.getPackageName());
+     * **** Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, packageURI);
+     * **** context.startActivity(intent);
      *
      * @param filePath 文件路径
      */
@@ -1014,5 +1022,6 @@ public class DeviceUtil {
     public static boolean isEmpty(final CharSequence s) {
         return s == null || s.length() == 0;
     }
+
 
 }

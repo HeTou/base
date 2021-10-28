@@ -151,6 +151,10 @@ public abstract class RxBaseTitleActivity extends RxBaseActivity {
         }
     }
 
+    public void setRightText(String text) {
+        mTvRightText.setText(text);
+    }
+
     /***自定义标题View*/
     public void setTitleCustomView(View view, FrameLayout.LayoutParams lp) {
         setTitle("");

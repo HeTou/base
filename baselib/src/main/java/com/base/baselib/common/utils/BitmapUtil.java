@@ -57,7 +57,7 @@ public class BitmapUtil {
                 ExifInterface.TAG_F_NUMBER,
                 ExifInterface.TAG_DATETIME,
                 ExifInterface.TAG_DATETIME_DIGITIZED,
-                ExifInterface.TAG_EXPOSURE_TIME,
+                ExifInterface.TAG_EXPOSURE_TIME,  //曝光时间
                 ExifInterface.TAG_FLASH,
                 ExifInterface.TAG_FOCAL_LENGTH,
                 ExifInterface.TAG_GPS_ALTITUDE,

@@ -1,3 +1,5 @@
-rootProject.name='My Application'
+include ':bitmap'
+rootProject.name='base'
 include ':app'
 include ':baselib'
+include ':bluetooth'
