@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.base.baselib.common.utils.BitmapUtil;
 import com.base.baselib.common.utils.DeviceUtil;
+import com.base.baselib.common.utils.SignCheckUtil;
 import com.bumptech.glide.Glide;
 import com.tbruyelle.rxpermissions3.RxPermissions;
 
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn = findViewById(R.id.btn);
         btn.setOnClickListener(this);
         mRxPermissions = new RxPermissions(this);
+
+        SignCheckUtil signCheckUtil = new SignCheckUtil(this);
+        signCheckUtil.check();
     }
 
     @Override
