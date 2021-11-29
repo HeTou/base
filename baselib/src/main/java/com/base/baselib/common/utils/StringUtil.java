@@ -255,4 +255,12 @@ public class StringUtil {
         }
         return true;
     }
+
+    public float toFloat(String str){
+        if(!isNumber(str)){
+            return 0f;
+        }
+        return Float.parseFloat(str);
+
+    }
 }

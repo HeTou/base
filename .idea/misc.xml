@@ -13,6 +13,12 @@
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/device_detail_item.xml" value="0.14356884057971014" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/device_list_item.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/recycler-view/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25052083333333336" />
+        <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
+        <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/item_main.xml" value="0.20244565217391305" />
+        <entry key="..\:/Android/zft/base/view/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/vr/src/main/res/layout/activity_main.xml" value="0.21979166666666666" />
+        <entry key="..\:/Android/zft/base/vr/src/main/res/layout/activity_vr_video.xml" value="0.16304347826086957" />
       </map>
     </option>
   </component>

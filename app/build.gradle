@@ -12,15 +12,71 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+//      多渠道包的code
+        flavorDimensions "versioncode"
+    }
+
+//  签名配置
+    signingConfigs {
+        debug {
+            keyAlias 'helloword'
+            keyPassword 'fans1234'
+            storeFile file('base.jks')
+            storePassword 'fans1234'
+        }
+        release {
+            keyAlias 'helloword'
+            keyPassword 'fans1234'
+            storeFile file('base.jks')
+            storePassword 'fans1234'
+        }
     }
 
     buildTypes {
+        debug {
+//          打印
+            println "address:" + getServerUrl("debug")
+            buildConfigField("String", "url", getServerUrl("debug"))
+            signingConfig signingConfigs.debug
+        }
         release {
-            minifyEnabled false
+            buildConfigField("String", "url", getServerUrl("debug"))
+//          混淆
+            minifyEnabled true
+//          签名配置
+            signingConfig signingConfigs.release
+
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
+//  apk包输出包名配置
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def version = "v${versionName}(${versionCode})_${variant.productFlavors[0].name}_${variant.buildType.name}"
+            def apkName = "base"
+            def fileName = "${apkName}_${version}_${getCurrentTime()}.apk"
+            outputFileName = fileName
+        }
+    }
+//  打多个渠道包，友盟，自己统计
+//  1、打不同的去到包，然后投放到不同的平台或者应用市场
+    productFlavors {
+        xiaomi {}
+        qh360 {}
+    }
+//  一键化多渠道打包
+    productFlavors.all {
+        flavor ->
+            buildConfigField "String", "PLATE_FROM", "\"${name}\""
+    }
+}
+
+
+def getCurrentTime() {
+//   java中生成当前时间
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"));
 }
 
 dependencies {
@@ -32,4 +88,20 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 //    implementation 'cn.hutool:hutool-all:5.6.6'
+}
+
+
+//用groovy语法获取配置
+def getServerUrl(String str) {
+    def url;
+    Properties properties = new Properties()
+    def proFile = file("src/main/filters/" + str + "/config.properties")
+    if (proFile.canRead()) {
+        properties.load(new FileInputStream(proFile))
+        if (properties != null) {
+            url = properties["serverUrl"]
+        }
+    }
+//    返回url
+    url
 }
