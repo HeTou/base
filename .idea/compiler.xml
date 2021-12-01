@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="base.app" target="1.8" />
+      <module name="base.baselib" target="1.8" />
+      <module name="base.bitmap" target="1.8" />
+      <module name="base.bluetooth" target="1.8" />
+      <module name="base.buildSrc" target="1.8" />
+      <module name="base.buildSrcPlugin" target="1.8" />
+      <module name="base.contentprovider" target="1.8" />
+      <module name="base.contentresolver" target="1.8" />
+      <module name="base.recycler-view" target="1.8" />
+      <module name="base.view" target="1.8" />
+      <module name="base.vr" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

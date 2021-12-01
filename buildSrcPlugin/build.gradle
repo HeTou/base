@@ -1,0 +1,27 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+
+}
+
+dependencies {
+    implementation gradleApi() //gradle sdk
+    implementation localGroovy() //groovy sdk
+
+    implementation 'com.android.tools.build:gradle:3.6.3'
+    implementation 'org.javassist:javassist:3.20.0-GA'
+}
+
+
+//classpath 'com.zft.plugin:standardAlonePlugin:1.0.0'
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../repo'))
+        pom.groupId = 'com.zft.plugin'
+        pom.artifactId = 'standardAlonePlugin'
+        pom.version = '1.0.1'
+    }
+}

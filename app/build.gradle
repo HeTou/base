@@ -1,4 +1,13 @@
+
 apply plugin: 'com.android.application'
+
+//脚本插件
+apply from: 'config.gradle'
+//对象插件
+apply plugin: CustomGradlePlugin
+
+apply plugin:'CustomPlugin2'
+
 
 android {
     compileSdkVersion 30
@@ -88,6 +97,18 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 //    implementation 'cn.hutool:hutool-all:5.6.6'
+}
+
+//build.gradle内自定义插件对象
+class CustomGradlePlugin implements Plugin<Project> {
+    @Override
+    void apply(Project target) {
+        target.task("showCustomPlugin") {
+            doLast {
+                println("this is CustomGradlePlugin")
+            }
+        }
+    }
 }
 
 
