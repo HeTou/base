@@ -22,6 +22,6 @@ uploadArchives {
         repository(url: uri('../repo'))
         pom.groupId = 'com.zft.plugin'
         pom.artifactId = 'standardAlonePlugin'
-        pom.version = '1.0.1'
+        pom.version = '1.0.5'
     }
 }

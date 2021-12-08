@@ -12,12 +12,12 @@ import org.gradle.api.Project
  * 5、app module 应用 apply plugin:'xxxx'   (xxxx.properties)  xxxx就是插件的id
  *
  */
-class CustomBuildSrcPlugin implements Plugin<Project> {
+class CustomBuildSrcPlugin2 implements Plugin<Project> {
     @Override
     void apply(Project target) {
         target.task("showCustomPluginInBuildSrc") {
             doLast {
-                println("buildSrc方式插件")
+                println("$project.name 这是独立项目gradle插件")
             }
         }
     }

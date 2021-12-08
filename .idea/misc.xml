@@ -15,6 +15,8 @@
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/device_list_item.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/contentprovider/src/main/res/layout/activity_main.xml" value="0.1935483870967742" />
         <entry key="..\:/Android/zft/base/contentresolver/src/main/res/layout/activity_main.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android/zft/base/mvvm/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25052083333333336" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/item_main.xml" value="0.20244565217391305" />

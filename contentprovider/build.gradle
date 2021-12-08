@@ -43,4 +43,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'org.greenrobot:greendao:3.3.0' // add library
+
+//  数据库加密
+    implementation "net.zetetic:android-database-sqlcipher:4.5.0"
+
+    // 如果你的项目使用的是AndroidX, 替换为以下方式
+    debugImplementation 'com.github.whataa:pandora:androidx_v2.1.0'
+
+// 不区分android-support和AndroidX
+    releaseImplementation 'com.github.whataa:pandora-no-op:v2.0.3'
 }

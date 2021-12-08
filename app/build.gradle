@@ -1,4 +1,3 @@
-
 apply plugin: 'com.android.application'
 
 //脚本插件
@@ -6,7 +5,8 @@ apply from: 'config.gradle'
 //对象插件
 apply plugin: CustomGradlePlugin
 
-apply plugin:'CustomPlugin2'
+//独立项目插件
+apply plugin: 'CustomPlugin2'
 
 
 android {

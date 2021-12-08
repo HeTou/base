@@ -6,7 +6,6 @@
 apply plugin:'xxxx'
 
 2、根目录 build.gradle
-
 buildscript {
       repositories {
           //本地仓库地址

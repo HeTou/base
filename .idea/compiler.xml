@@ -8,8 +8,13 @@
       <module name="base.bluetooth" target="1.8" />
       <module name="base.buildSrc" target="1.8" />
       <module name="base.buildSrcPlugin" target="1.8" />
+      <module name="base.classloader" target="1.8" />
+      <module name="base.classloader_plugin" target="1.8" />
       <module name="base.contentprovider" target="1.8" />
       <module name="base.contentresolver" target="1.8" />
+      <module name="base.mvp" target="1.8" />
+      <module name="base.mvvm" target="1.8" />
+      <module name="base.mvvm_kotlin" target="1.8" />
       <module name="base.recycler-view" target="1.8" />
       <module name="base.view" target="1.8" />
       <module name="base.vr" target="1.8" />
