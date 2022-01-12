@@ -8,6 +8,9 @@ apply plugin: CustomGradlePlugin
 //独立项目插件
 apply plugin: 'CustomPlugin2'
 
+//资源混淆插件
+apply plugin: 'AndResGuard'
+
 
 android {
     compileSdkVersion 30
@@ -15,7 +18,7 @@ android {
 
     defaultConfig {
         applicationId "com.base.base"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -24,6 +27,13 @@ android {
 
 //      多渠道包的code
         flavorDimensions "versioncode"
+
+        //筛选国际话语言,那如果知道语言的缩写呢，可以通过apk里的resources.asrc查看
+        resConfigs 'zh-rCN'
+        ndk{
+            //一般我只需要配置 ‘armeabi-v7a’
+            abiFilters 'armeabi-v7a'
+        }
     }
 
 //  签名配置
@@ -53,6 +63,7 @@ android {
             buildConfigField("String", "url", getServerUrl("debug"))
 //          混淆
             minifyEnabled true
+//            resourceEnable true
 //          签名配置
             signingConfig signingConfigs.release
 
@@ -80,6 +91,11 @@ android {
         flavor ->
             buildConfigField "String", "PLATE_FROM", "\"${name}\""
     }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 
@@ -93,10 +109,12 @@ dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':baselib')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 //    implementation 'cn.hutool:hutool-all:5.6.6'
+
 }
 
 //build.gradle内自定义插件对象
@@ -125,4 +143,54 @@ def getServerUrl(String str) {
     }
 //    返回url
     url
+}
+
+
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    // 设置这个值，会把arsc name列混淆成相同的名字，减少string常量池的大小
+    fixedResName = "arg"
+    // 打开这个开关会合并所有哈希值相同的资源，但请不要过度依赖这个功能去除去冗余资源
+    mergeDuplicatedRes = true
+    whiteList = [
+//            // for your icon
+//            "R.drawable.icon",
+//            // for fabric
+//            "R.string.com.crashlytics.*",
+//            // for google-services
+//            "R.string.google_app_id",
+//            "R.string.gcm_defaultSenderId",
+//            "R.string.default_web_client_id",
+//            "R.string.ga_trackingId",
+//            "R.string.firebase_database_url",
+//            "R.string.google_api_key",
+//            "R.string.google_crash_reporting_api_key"
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.21'
+        //path = "/usr/local/bin/7za"
+    }
+
+    /**
+     * 可选： 如果不设置则会默认覆盖assemble输出的apk
+     **/
+     finalApkBackupPath = "${project.rootDir}/app/final_ndk.apk"
+
+    /**
+     * 可选: 指定v1签名时生成jar文件的摘要算法
+     * 默认值为“SHA-1”
+     **/
+    // digestalg = "SHA-256"
 }

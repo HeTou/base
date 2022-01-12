@@ -3,24 +3,53 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/zft/base/IPCBinderDemo/src/main/res/layout/activity_second.xml" value="0.10764944275582573" />
+        <entry key="..\:/Android/zft/base/androidproxy/src/main/res/layout/activity_main.xml" value="0.12635869565217392" />
+        <entry key="..\:/Android/zft/base/animation/src/main/res/drawable/bg_record_anim1.xml" value="0.10925925925925926" />
+        <entry key="..\:/Android/zft/base/animation/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/app/src/main/res/layout/activity_splash.xml" value="0.16336633663366337" />
         <entry key="..\:/Android/zft/base/baselib/src/main/res/drawable/abs_loading_bg.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/baselib/src/main/res/drawable/anim_loading.xml" value="0.25416666666666665" />
+        <entry key="..\:/Android/zft/base/baselib/src/main/res/drawable/splash.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/baselib/src/main/res/layout/abs_title_activity.xml" value="0.1408514492753623" />
         <entry key="..\:/Android/zft/base/baselib/src/main/res/layout/abs_title_layout.xml" value="0.1408514492753623" />
         <entry key="..\:/Android/zft/base/baselib/src/main/res/layout/common_loading.xml" value="0.1408514492753623" />
+        <entry key="..\:/Android/zft/base/binderdemo/src/main/res/layout/activity_main.xml" value="0.10597826086956522" />
+        <entry key="..\:/Android/zft/base/binderdemo/src/main/res/layout/activity_second.xml" value="0.10597826086956522" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/activity_character.xml" value="0.13496376811594202" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/activity_device_detail.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/activity_gaomu.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/device_detail_item.xml" value="0.14356884057971014" />
         <entry key="..\:/Android/zft/base/bluetooth/src/main/res/layout/device_list_item.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/classloader/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/classloader/src/main/res/layout/activity_old_main.xml" value="0.19701086956521738" />
+        <entry key="..\:/Android/zft/base/classloader_plugin/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/zft/base/contentprovider/src/main/res/layout/activity_main.xml" value="0.1935483870967742" />
         <entry key="..\:/Android/zft/base/contentresolver/src/main/res/layout/activity_main.xml" value="0.17447916666666666" />
+        <entry key="..\:/Android/zft/base/handlerdemo/src/main/res/layout/activity_main.xml" value="0.1503623188405797" />
+        <entry key="..\:/Android/zft/base/https/src/main/res/layout/activity_main.xml" value="0.2105978260869565" />
         <entry key="..\:/Android/zft/base/mvvm/src/main/res/layout/activity_main.xml" value="0.14635416666666667" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_coroutines.xml" value="0.12273550724637682" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_ctrlstream.xml" value="0.1947463768115942" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_inline.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_job_scheduler.xml" value="0.1157548125633232" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_kotlin.xml" value="0.1947463768115942" />
         <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_properties_delegate.xml" value="0.1947463768115942" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/activity_work_manager.xml" value="0.11775362318840579" />
+        <entry key="..\:/Android/zft/base/mvvm_kotlin/src/main/res/layout/item_kotlin.xml" value="0.1947463768115942" />
+        <entry key="..\:/Android/zft/base/plugin/basePluginlib/src/main/res/layout/activity_main.xml" value="0.1296875" />
+        <entry key="..\:/Android/zft/base/plugin/classloader/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/plugin/plugina/src/main/res/layout/activity_main_plugin.xml" value="0.1157548125633232" />
+        <entry key="..\:/Android/zft/base/plugin/pluginb/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/plugina2/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.25052083333333336" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
         <entry key="..\:/Android/zft/base/recycler-view/src/main/res/layout/item_main.xml" value="0.20244565217391305" />
         <entry key="..\:/Android/zft/base/view/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/zft/base/view/src/main/res/layout/activity_touch_event.xml" value="0.4" />
         <entry key="..\:/Android/zft/base/vr/src/main/res/layout/activity_main.xml" value="0.21979166666666666" />
         <entry key="..\:/Android/zft/base/vr/src/main/res/layout/activity_vr_video.xml" value="0.16304347826086957" />
       </map>

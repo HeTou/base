@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/holo_red_light" />
+    <item android:top="30dp">
+        <bitmap
+            android:gravity="top|center_horizontal"
+            android:src="@drawable/abs_loading" />
+    </item>
+</layer-list>

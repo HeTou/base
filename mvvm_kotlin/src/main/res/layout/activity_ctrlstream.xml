@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_if"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="if" />
+
+        <Button
+            android:id="@+id/btn_when"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="onClick"
+            android:text="when" />
+
+        <Button
+            android:id="@+id/btn_for"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="for" />
+
+        <Button
+            android:id="@+id/btn_while"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:onClick="onClick"
+            android:text="while" />
+    </LinearLayout>
+</layout>

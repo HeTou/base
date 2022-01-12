@@ -4,6 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -12,21 +13,40 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/IPCBinder" />
+            <option value="$PROJECT_DIR$/IPCBinderDemo" />
+            <option value="$PROJECT_DIR$/algorithm" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselib" />
             <option value="$PROJECT_DIR$/bitmap" />
             <option value="$PROJECT_DIR$/bluetooth" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/buildSrcPlugin" />
-            <option value="$PROJECT_DIR$/classloader" />
-            <option value="$PROJECT_DIR$/classloader_plugin" />
             <option value="$PROJECT_DIR$/contentprovider" />
             <option value="$PROJECT_DIR$/contentresolver" />
+            <option value="$PROJECT_DIR$/gradlePlugin" />
+            <option value="$PROJECT_DIR$/gradlePlugin/buildSrcPlugin" />
+            <option value="$PROJECT_DIR$/handlerdemo" />
+            <option value="$PROJECT_DIR$/https" />
+            <option value="$PROJECT_DIR$/jvm" />
+            <option value="$PROJECT_DIR$/mmap" />
             <option value="$PROJECT_DIR$/mvp" />
             <option value="$PROJECT_DIR$/mvvm" />
             <option value="$PROJECT_DIR$/mvvm_kotlin" />
+            <option value="$PROJECT_DIR$/plugin" />
+            <option value="$PROJECT_DIR$/plugin/basePluginlib" />
+            <option value="$PROJECT_DIR$/plugin/classloader" />
+            <option value="$PROJECT_DIR$/plugin/classloader_plugin" />
+            <option value="$PROJECT_DIR$/plugin/patch" />
+            <option value="$PROJECT_DIR$/plugin/plugin2" />
+            <option value="$PROJECT_DIR$/plugin/plugina" />
+            <option value="$PROJECT_DIR$/plugin/pluginb" />
+            <option value="$PROJECT_DIR$/plugin/tinker" />
             <option value="$PROJECT_DIR$/poet_annotation" />
             <option value="$PROJECT_DIR$/poet_compiler" />
+            <option value="$PROJECT_DIR$/proxy" />
+            <option value="$PROJECT_DIR$/proxy/androidproxy" />
+            <option value="$PROJECT_DIR$/proxy/proxy2" />
             <option value="$PROJECT_DIR$/recycler-view" />
             <option value="$PROJECT_DIR$/view" />
             <option value="$PROJECT_DIR$/vr" />

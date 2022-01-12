@@ -1,0 +1,9 @@
+client.crt client.key 是服务端提供的， 可以理解为证书、私钥
+openssl pkcs12 -export -in client.crt -inkey client.key -out client.p12 -name tomcat -CAfile ca.crt -caname root -chain
+
+得到 client.p12 ,再通过 portcecle 转成bks
+
+client.bks 是通过上面两个得到的
+
+
+FiddlerRoot.cer 为 Fiddler的代理证书，当app信任该证书后，就可以被拦截到了。

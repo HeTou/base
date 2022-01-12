@@ -4,8 +4,22 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/transparent_00000000</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--  启动页主题
+        疑问1：将该style写在 base module时，头部bar是透明的切没法铺满
+    -->
+    <style name="LauchTheme" parent="AppTheme">
+        <!--   设置系统的取消预览（空白窗口）为true   -->
+        <item name="android:windowDisablePreview">true</item>
+        <!--   该凉种种那个方式都属于同一种方案：将Theme的背景改为透明，这样用户
+               从视觉上就无法看出黑白屏的存在-->
+        <!--    设置背景为透明    -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
     </style>
 
 </resources>

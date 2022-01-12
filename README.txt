@@ -6,7 +6,8 @@
     bluetooth     蓝牙连接
     buildSrc      gradle脚本编写
     buildSrcPlugin  gradle脚本独立依赖
-    classloader
+    classloader      热修复核心原理
+    classloader-plugin  生成dex文件
     contentprovider  contentProvider的学习
     contentresolver  contentProvider的访问
     poet_annotation  编译时注解

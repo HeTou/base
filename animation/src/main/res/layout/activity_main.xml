@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="帧动画" />
+
+
+    <Button
+        android:id="@+id/btn_tween"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="补间动画" />
+
+
+    <Button
+        android:id="@+id/btn_prop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="属性动画" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_baseline_local_taxi_24" />
+    </FrameLayout>
+</LinearLayout>

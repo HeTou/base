@@ -1,0 +1,21 @@
+启动时间测量：
+
+ 1、系统日志输出
+    1659-1785/? I/ActivityTaskManager: Displayed com.base.base/.SplashActivity: +357ms
+ 2、adb命令
+    adb shell am start -W com.base.base/.SplashActivity
+
+    LaunchState: COLO
+    thisTime 925:代表最后一个activity的启动时间
+    TotalTime 925: 所有activity的启动时间
+    WaitTime 977: 所有时间, ams启动activity总耗时
+
+ 3、Debug.startMethodTracing
+ //      方法耗时统计
+         Debug.startMethodTracing("launcher");
+         代码1
+         代码1
+         代码1
+         .......
+         Debug.stopMethodTracing();
+        然后会在本地生成文件/mnt/sdcard/Android/data/com.base.base/files/launcher.trace

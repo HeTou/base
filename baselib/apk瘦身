@@ -1,0 +1,51 @@
+apk瘦身？？
+
+1、图片优化
+  a、使用svg（可缩放矢量图）优点在于可以减小apk体积，常用于简单小图标
+    注意：使用本地svg 需要转化成vector才能使用 ，不支持阴影、模糊，颜色矩阵，不支持文本
+    方式一：
+    android5.0以下不支持 svg ，可以通过配置
+    android{
+        defaultConfig{
+            //当你的手机是5.0以下的时候，将svg生成指定维度的png图片
+            generatedDensities=['xhdpi','xxhdpi']
+        }
+    }
+    方式二：
+        android{
+            defaultConfig{
+               //需要支持库库版本 appcompat-v7:23.2及以上版本 或 androidx.appcompat:
+               vectorDrawable.useSupportLibrary =true
+            }
+        }
+2、无用资源剔除
+  快捷键唤起(shift+shift) 搜索： remove unused resouces
+3、国际化资源配置优化
+    andorid{
+        defaultConfig{
+            //筛选国际话语言,那如果知道语言的缩写呢，可以通过apk里的resources.asrc查看
+            resConfigs 'en',''
+        }
+    }
+4、动态库打包优化(这里用的好，基本可以减少一半体积)
+    android{
+        defaultConfig{
+            ndk{
+                //一般我只需要配置 ‘armeabi-v7a’ 目前市面上手机大多都是 armeabi-v7d 架构
+                abiFilters 'armeabi-v7a'
+            }
+        }
+    }
+5、代码压缩/代码混淆
+   android{
+        defaultConfig{
+            minifyEnabled true  //代码混淆
+        }
+   }
+6、资源压缩/资源混淆  AndResGurad:https://github.com/shwenzhang/AndResGuard/blob/master/README.zh-cn.md#%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98
+       //测试发现并没有 resourcesEnable这个参数
+       android{
+            defaultConfig{
+                resourcesEnable true  //资源混淆
+            }
+       }

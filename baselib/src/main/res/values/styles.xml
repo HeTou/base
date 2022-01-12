@@ -1,5 +1,7 @@
 <resources>
 
+
+
     <!--横线主题-->
     <style name="HorizontalLine">
         <item name="android:layout_width">match_parent</item>

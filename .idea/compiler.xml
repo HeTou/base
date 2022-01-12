@@ -2,19 +2,37 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
+      <module name="base.algorithm" target="1.8" />
+      <module name="base.androidproxy" target="1.8" />
+      <module name="base.animation" target="1.8" />
       <module name="base.app" target="1.8" />
       <module name="base.baselib" target="1.8" />
       <module name="base.bitmap" target="1.8" />
       <module name="base.bluetooth" target="1.8" />
       <module name="base.buildSrc" target="1.8" />
       <module name="base.buildSrcPlugin" target="1.8" />
-      <module name="base.classloader" target="1.8" />
-      <module name="base.classloader_plugin" target="1.8" />
       <module name="base.contentprovider" target="1.8" />
       <module name="base.contentresolver" target="1.8" />
+      <module name="base.gradlePlugin.buildSrcPlugin" target="1.8" />
+      <module name="base.handlerdemo" target="1.8" />
+      <module name="base.https" target="1.8" />
+      <module name="base.IPCBinder" target="1.8" />
+      <module name="base.IPCBinderDemo" target="1.8" />
+      <module name="base.jvm" target="1.8" />
+      <module name="base.mmap" target="1.8" />
       <module name="base.mvp" target="1.8" />
       <module name="base.mvvm" target="1.8" />
       <module name="base.mvvm_kotlin" target="1.8" />
+      <module name="base.plugin.basePluginlib" target="1.8" />
+      <module name="base.plugin.classloader" target="1.8" />
+      <module name="base.plugin.classloader_plugin" target="1.8" />
+      <module name="base.plugin.patch" target="1.8" />
+      <module name="base.plugin.plugin2" target="1.8" />
+      <module name="base.plugin.plugina" target="1.8" />
+      <module name="base.plugin.pluginb" target="1.8" />
+      <module name="base.plugin.tinker" target="1.8" />
+      <module name="base.plugina" target="1.8" />
+      <module name="base.proxy.androidproxy" target="1.8" />
       <module name="base.recycler-view" target="1.8" />
       <module name="base.view" target="1.8" />
       <module name="base.vr" target="1.8" />

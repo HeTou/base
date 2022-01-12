@@ -10,7 +10,6 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.cert.Certificate;
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
@@ -141,7 +140,8 @@ public class SignCheckUtil {
      * @return true 签名正常 false 签名不正常
      */
     public boolean check() {
-
+//        D7:1F:0C:F6:B1:34:DF:FC:BB:8E:3C:F6:A7:DA:A9:FD:13:E3:22:AE
+//H
         if (this.realCer != null) {
             cer = cer.trim();
             realCer = realCer.trim();

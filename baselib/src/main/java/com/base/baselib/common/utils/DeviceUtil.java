@@ -330,6 +330,7 @@ public class DeviceUtil {
     }
 
     /**
+     *
      * 获取ANDROID ID
      *
      * @param context
@@ -998,19 +999,6 @@ public class DeviceUtil {
         sb.append("是否存在sd卡：" + SdUtil.isSdExist()).append("\r\n");
 //        sb.append("当前网络：" + NetWorkUtil.getNetWorkTypeName(context));
         return sb.toString();
-    }
-
-    private static String getImagePath(Context context, Uri uri, String selection) {
-        String path = null;
-        //通过Uri和selection来获取真实的图片路径
-        Cursor cursor = context.getContentResolver().query(uri, null, selection, null, null);
-        if (cursor != null) {
-            if (cursor.moveToFirst()) {
-                path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));
-            }
-            cursor.close();
-        }
-        return path;
     }
 
     /**
